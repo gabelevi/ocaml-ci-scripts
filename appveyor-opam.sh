@@ -81,6 +81,7 @@ case "$SWITCH" in
         echo "ocamlc reports a dubious system: ${ocaml_system}. Good luck!" >&2
         eval $(opam config env)
 esac
+opam update
 if [ $is_msvc -eq 0 ]; then
     opam install depext-cygwinports depext ocamlfind
 else
